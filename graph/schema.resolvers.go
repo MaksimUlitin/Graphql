@@ -30,7 +30,7 @@ func (r *mutationResolver) DeleteJobListing(ctx context.Context, id string) (*mo
 
 // Jobs is the resolver for the jobs field.
 func (r *queryResolver) Jobs(ctx context.Context) ([]*model.JobListing, error) {
-	return db.Jobs(), nil
+	return db.GetJobs(), nil
 }
 
 // Job is the resolver for the job field.
